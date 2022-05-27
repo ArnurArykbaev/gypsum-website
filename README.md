@@ -1,5 +1,5 @@
 # gypsum-website
-website for plasterers
+website for plasterers (https://arnurarykbaev.github.io/gypsum-website/index.html)
 
 * This website was created with the less css preprocessor
 * This project uses slick slider
