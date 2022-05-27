@@ -1,0 +1,1004 @@
+/* Fonts family */
+@font-face {
+    font-family: 'ProximaNova_Bold';
+    src: url('../fonts/ProximaNova-Bold.eot');
+    src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Bold.woff') format('woff'),
+        url('../fonts/ProximaNova-Bold.ttf') format('truetype'),
+        url('../fonts/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProximaNova_Regular';
+    src: url('../fonts/ProximaNova-Regular.eot');
+    src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Regular.woff') format('woff'),
+        url('../fonts/ProximaNova-Regular.ttf') format('truetype'),
+        url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.reg() {
+    font-family: 'ProximaNova_Regular', sans-serif;
+}
+.bold() {
+    font-family: 'ProximaNova_Bold', sans-serif;
+}
+
+/* Colors */
+ @btn-color: #fdb303;
+ @icons: #46b914;
+ @green-text: #06a30e;
+ @text: #292929;
+ @danger: #ff0000;
+ @bg-light: #f5f5f5;
+ @bg-template: #fff;
+ @border-input: #dddddd;
+ @dark: #757575;
+
+ /* Basic settings */
+html {
+font-size:10px;
+}
+body {
+    .reg();
+}
+
+button, input, a {
+    &:focus {
+        outline: none;
+    }
+}
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+.button {
+    background-color: @btn-color;
+    color: @bg-template;
+    padding: 1.2rem 3rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+    border: none;
+    font-size: 1.1em;
+    transition: all 0.2s;
+    &:hover {
+        cursor: pointer;
+        background-color: darken(@btn-color, 5%);
+    }
+}
+    /* Главная форма */
+.form { 
+    position: relative;
+    padding: 4rem 5rem;
+    background-color: @bg-template;
+    text-align: center;
+    z-index: 1;
+    &-header {
+        font-size: 1.8rem;
+        margin-bottom: 4rem;
+        strong {
+            font-size: 1.9rem;   
+        }
+    }
+    &-input {
+        display: block;
+        margin: 2rem 0;
+        width: 100%;
+        border: 1px solid @border-input;
+        border-radius: 5px;
+        padding: 1.5rem;
+    }
+    label {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        padding: 0.5rem;
+        font-size: 1rem;
+        background-color: @bg-template;
+    }
+    &-btn {
+        display: block;
+        height: 5.5rem;
+        width: 100%;
+        font-size: 1.6rem;
+    }
+    small {
+        display: block;
+        margin-top: 1.5rem;
+    }
+}
+
+ /* Typography */
+section {
+padding: 10rem 0;
+}
+.section-header {
+    &-light {
+        color: @bg-light;
+        margin-top: 0;
+    }
+    h2 {
+    margin: 2rem 0;
+    font-size: 3.6rem;
+    .bold();
+    }
+    p {
+        font-size: 1.4rem;
+    }
+    font-size: 3.6rem;
+    text-align: center;
+}
+/* Main */
+.main {
+    padding: 3rem 0;
+    background: #fff url(../img/main.jpg) center center no-repeat;
+    background-size: cover;
+    &-content {
+        margin-top: 10rem;
+        h1 {
+            margin-bottom: 4rem;
+            font-size: 4rem;
+            .bold();
+            line-height: 1.45;
+            text-transform: uppercase;
+        }
+    }
+    &-sub {
+        margin-bottom: 4rem;
+        font-size: 2.4rem;
+    }
+    span {
+        display: inline-block;
+        padding: 3rem 5rem;
+        font-size: 1.8em;
+        color: @bg-template;
+        background-color: @icons;
+        text-align: center;
+        strong {
+            font-size: 3rem;
+            .bold();
+        }
+    }
+    &-trigger {
+        display: block;
+        margin-top: 3rem;
+        .bold;
+        font-size: 2.2rem;
+        text-transform: uppercase;
+    }
+}
+.header {
+    height: 7rem;
+    &-col {
+        justify-content: end;
+    }
+}
+.phone_link {
+    display: inline-block;
+    font-size: 2rem;
+    .bold();
+    font-weight: 900;
+    text-decoration: none;
+    color: @text;
+}
+
+/* Блок с преимуществами */
+.features {
+    &-block {
+        text-align: center;
+    }
+    &-img {
+        height: 8rem;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    h3 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        .bold();
+        margin-bottom: 1.6rem;
+    }
+    p {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+}
+.slick-active {
+    outline: none;
+}
+.arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 99;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+}
+.prev {
+    left: 0;
+    background: url(../img/features/left-button.svg) center no-repeat;
+    background-size: 70%;
+}
+.next {
+    right: 0;
+    background: url(../img/features/right-button.svg) center no-repeat;
+    background-size: 70%;
+}
+.header-features {
+    text-align: center;
+    margin-bottom: 12rem;
+    .bold();
+    font-size: 3.6rem;
+    font-weight: 900;
+}
+
+/* Цены */
+.prices {
+    background: url(../img/prices/green.jpg) center, @icons;
+    color: @bg-light;
+    text-align: center;
+    &-box {
+        margin-top: 4rem;
+    }
+    &-block {
+        background: @bg-template;
+        color: @text;
+        padding: 3rem 3rem;
+        font-size: 1.6rem;
+        line-height: 1.6;
+        max-width: 41rem;
+        p {
+            padding: 0;
+            strong {
+                font-size: 2.5rem;
+                .bold();
+            }
+        }
+        ul {
+            font-size: 1.2rem;
+            list-style-type: none;
+        }
+        li {
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 1.5rem;
+                height: 1.5rem;
+                background: url(../img/prices/check.svg) no-repeat center;
+                background-size: 100%;
+                vertical-align: middle;
+                margin-right: 1rem;
+            }
+        }
+    }
+    &-img {
+        display: inline-block;
+        width: 100%;
+        max-width: 30rem;
+        margin-bottom: 2rem;
+    }
+    &-bottom-text {
+        height: 100%;
+        min-height: 20rem;
+    }
+    &-header-btn {
+        float: right;
+        margin-top: 2.5rem;
+        box-shadow: 7px 12px 21px 0 px rgba(0, 0, 0, 0.17);
+        text-align: center;
+    }
+    h4 {
+        font-size: 2rem;
+        .bold();
+        padding: 2rem 0;
+        min-height: 9rem;
+    }
+}
+
+/* Отзывы */
+
+.feedback {
+    position: relative;
+    background: #d3b0b0 url(../img/feedback/feedback-bg.jpg) no-repeat center;
+    background-size: cover;
+    &-prev-btn {
+        left: -4rem;
+    }
+    &-next-btn {
+        right: -4rem;
+    }
+    &-slider{
+         background-color: #fff;
+         box-shadow: 6px 10px 18px 0px rgba(0, 0, 0, 0.11);
+         margin-bottom: 12rem;
+         &-btn {
+             position: absolute;
+             top: 50%;
+             transform: translateY(-50%);
+             width: 4rem;
+             height: 5rem;
+             background: @icons;
+             border: none;
+             img {
+                 width: 50%;
+             }
+         }
+    }
+    &-text {
+        position: relative;
+        margin-top: 2rem;
+        padding: 1rem;
+        border: 2px solid @icons;
+        font-style: italic;
+        &::before {
+            content:'';
+            display: block;
+            position: absolute;
+            top: -2rem;
+            left: 4rem;
+            width: 2rem;
+            height: 2rem;
+            background-color: @bg-template;
+            border: 2px solid @icons;
+            border-bottom: none;
+            border-top-right-radius: 100px;
+        }
+    }
+    h3 {
+        .bold();
+    }
+    &-form {
+        text-align: center;
+        label {
+            transform: translateX(0%) translateY(130%);
+            background-color: @bg-template;
+            padding: 0.5rem;
+        }
+        &-btn {
+            max-width: 90rem;
+        }
+    }
+}
+.hand {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 20%;
+
+}
+.customer {
+    align-items: center;
+    p {
+        font-size: 1.4rem;
+        margin-bottom: 0;
+    }
+    &-name {
+        font-size: 1.8rem;
+        .bold();
+
+    }
+}
+
+
+/* Блок с иконками */
+.scheme {
+    background: @bg-template url(../img/shpatel.png) bottom -13rem right 0rem no-repeat;
+    background-size: 75rem; 
+    &-block {
+        margin-top: 2rem;
+        h3 {
+            margin-top: 1.5rem;
+            font-size: 2rem;
+            .bold();
+        }
+        p {
+            margin-top: 1.5rem;
+        }
+        img {
+            max-height: 9.5rem;
+        }
+    }
+}
+
+/* Все на 100% включено */
+
+.all-inclusive {
+    background-color: @bg-light;
+    &-header {
+        h2 {
+            color: @green-text;
+        }
+    }
+    &-blocks {
+        margin-top: 6rem;
+        &-box {
+            margin-bottom: 5rem;
+        }
+    }
+    .circle-header {
+        font-size: 1.5rem;
+        .bold();
+        margin-bottom: 0.3rem;
+    }
+    .circle-text {
+        font-size: 1.1rem;
+    }
+    
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 5rem;
+        background-color: @green-text;
+        border-radius: 50%;
+        color: @bg-template;
+        font-size: 1.3rem;
+        .bold();
+    }
+
+    .border-circle {
+        text-align: center;
+        display: inline-block;
+        border: 2px solid @green-text;
+        border-radius: 50%;
+        padding: 0.3rem;
+    }
+    .circle-info {
+        margin-top: 2.5rem;
+    }
+
+}
+
+/* Мы развеем все опасения: */
+.solutions {
+    position: relative;
+    &-header {
+        margin-bottom: 3rem;
+    }
+    &-block {
+        &-problems,
+        &-solutions {
+            display: block;
+            border: 3px solid;
+            padding: 3rem;
+            min-height: 30rem;
+            h3 {
+                font-size: 2rem;
+                .bold();
+                margin-bottom: 3rem;
+            }
+            p {
+                font-size: 1.4rem;
+            }
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            li {
+                padding: 0;
+                margin-bottom: 2rem;
+                margin-left: 3rem;
+                .bold();
+                &:before {
+                    position: absolute;
+                    content: '';
+                    display: inline-block;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    vertical-align: middle;
+                    margin-right: 1rem;
+                    margin-left: -3rem;
+                }
+            }
+        }
+        &-problems {
+            border-color: @dark;
+            h3 {
+                color: @dark;
+            }
+            li {
+                &:before {
+                    background: url(../img/cancel.svg) no-repeat center;
+                    background-size: 100%;
+                }
+            }
+        }
+        &-solutions { 
+            border-color: @green-text;
+            li {
+                &:before {
+                    background: url(../img/prices/check.svg) no-repeat center;
+                    background-size: 100%;
+                }
+            }
+        }        
+    }
+    &-woman {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        max-height: 68%;
+        margin-left: -4rem;
+    }
+}
+
+/* Материалы */
+.materials {
+    &-slider {
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        &-block {
+            text-align: center;
+            img {
+                margin: 0 auto;
+            }
+            h4 {
+                font-size: 1.6rem;
+                .bold ();
+                margin-bottom: 1.5rem;
+            }
+            p {
+                font-size: 1.2rem;
+                line-height: 1.8rem;
+                margin: 0;
+                span {
+                    .bold ();
+                }
+            }
+        }
+    }
+    &-bottom-text {
+        text-align: center;
+        font-size: 1.2rem;
+        span {
+            font-size: 1.4rem;
+            .bold();
+        }
+        a {
+            text-decoration: none;
+            color: @green-text;
+        }
+    }
+}
+.sertificate {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: @green-text;
+    text-decoration: none;
+    border-bottom: 1px dotted @green-text;
+    margin-top: 1.5rem;
+    &:hover {
+        color: darken(@green-text, 15%);
+        border-color: darken(@green-text, 15%);
+    }
+}
+/* Посмотрите как мы работам / contact-form */
+.contact-form {
+    background: @bg-template url(../img/man.png) bottom center no-repeat;
+    background-size: cover;
+    &-header {
+        h1 {
+            text-align: left;
+            margin-bottom: 4rem;
+            font-size: 4rem;
+            .bold();
+            line-height: 1.45;
+            text-transform: uppercase;
+        }
+        p {
+            margin: 0;
+        }
+        &-text{
+            padding: 5rem auto;
+            font-size: 2rem;
+            text-align: left;
+            &-top {
+                padding-bottom: 1.5rem;
+            }
+        }
+    }
+}
+
+/* Upsell / Дополнительные услуги */
+.upsell {
+    background: url(../img/prices/green.jpg) center, #46b914;
+    color: @bg-template;
+    &-info {
+        text-align: center;
+        margin-top: 5rem;
+        &-block {
+            min-height: 30rem;
+            img{
+                display: inline-block;
+                margin-bottom: 1rem;
+                width: 100%;
+                max-width: 30rem;
+
+            }
+            p {
+                font-size: 2rem;
+            }
+        }
+        &-btn {
+            float: bottom;
+            .bold();
+        }
+    }
+}
+/* Contact/ Контакты */
+.contact {
+    background: @bg-light url(../img/footer/footer-tool.png) bottom center no-repeat ;
+    background-size: cover;
+    &-map {
+        &-header {
+            padding: 5rem auto;
+            text-align: left;
+        }
+        p {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            line-height: 2.5rem;
+        }
+        &-block {
+            margin: 2.5rem auto;
+        }
+    }
+}
+
+/* footer */
+.footer {
+    padding: 3rem;
+    &-logo {
+        img {
+            max-height: 5rem;
+            margin: auto 0;
+
+        }
+        text-align: left;
+    }
+    &-contacts {
+        text-align: center;
+        h5 {
+            font-size: 1.6rem;
+        }
+        &-underline {
+            display: inline-block;
+            text-decoration: none;
+            border-bottom: 1px dotted @text;
+            color: @text;
+            font-size: 1.2rem;
+            &:hover {
+                color: @green-text;
+                border-color: @green-text;
+            }
+        }
+        &-justunderline {
+            display: inline-block;
+            text-decoration: none;
+            border-bottom: 1px dotted @text;
+            color: @text;
+            font-size: 1.2rem;
+        }
+    }
+    &-des {
+        text-align: right;
+        p {
+            font-size: 0.9rem;
+        }
+        img {
+            display: inline-block;
+            text-align: center;
+            max-height: 4rem;
+        }
+
+    }
+}
+
+
+/* Модальные окна */
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(36, 29, 29, 0.5);
+
+    &-content {
+        position: fixed;     
+        left: 50%;
+        top: 10%;
+        background: @bg-template;  
+        transform: translateX(-50%);
+        text-align: center;
+        padding: 4rem 6rem;
+    }
+    &-form {
+        margin-top: 3rem; 
+        padding: 0;
+    }
+    &-close {
+        position: absolute;
+        top: -2rem;
+        right: -3rem;
+        width: 3rem;
+        text-align: center;
+        border: none;
+        background-color: transparent;
+        font-size: 4rem;
+        color: @bg-light;
+    }
+    &-header {
+        font-size: 2rem;
+        font-weight: 900;
+        .bold();
+        padding-bottom: 2rem;
+    }
+
+}
+
+@media (max-width:1700px) {
+    .scheme {
+        background: @bg-template url(../img/shpatel.png) bottom -13rem right -5rem no-repeat;
+        background-size: 65rem; 
+    }
+}
+@media (max-width:1400px) {
+    .contact-form-btn {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width:1300px) {
+    .scheme {
+        background-position: bottom -9rem right -12rem;
+        background-size: 55rem;
+    }
+}
+@media (max-width:1200px) {
+    .contact {
+        background: @bg-light;
+    }
+}
+
+@media (max-width: 991px) {
+    .main {
+        background-position: top right;
+    }
+    .main-title {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .main-content {
+        margin-top: 5rem;
+    }
+    .header{
+        &-col {
+            justify-content: center;            
+        }
+    }
+    
+    .prices-block {
+        h4 {
+            min-height: 11.2rem;
+        }
+    }
+    .scheme {
+        background-image: none;
+    }
+    .all-inclusive-blocks-box {
+        max-height: 4rem;
+    }
+    .solutions {
+        &-block {
+            &-solutions,
+            &-problems {
+                min-height: 35rem;
+            }
+        }
+    }
+    .contact-form {
+        &-header {
+            h1 {
+                font-size: 2.8rem;
+                margin-bottom: 2.5rem;
+            }
+            &-text {
+                font-size: 1.5rem;
+            }
+        }
+        .contact-form-btn {
+            font-size: 1.2rem;
+        }
+    }
+    .upsell {
+        &-info {
+            &-block {
+                p {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: auto 0;
+                    min-height: 6rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width:767px) {
+    .main {
+        background-position: top left;
+    }
+    .header{
+        height: 100%;
+        .row {
+            text-align: center;
+        }
+        &-col {
+            margin-top: 2rem;
+            justify-content: center;            
+        }
+    }
+    .next {
+        margin-right: -15px;
+    }
+    .prev {
+        margin-left: -15px;
+    }
+    .prices-header-btn {
+        float: none;
+    }
+    .prices-block {
+        margin: 0 auto;
+        h4 {
+            min-height: 9rem;
+        }
+    }
+    .prices-bottom-text {
+        min-height: 10rem;
+        margin-bottom: 3rem;
+    }
+    .feedback {
+        text-align: center;
+        &-slider_item {
+            text-align: center;
+        }
+        &-prev-btn {
+            left: 0rem;
+        }
+        &-next-btn {
+            right: 0rem;
+        }
+        &-slider{
+            &-btn {
+                top: 50%;
+                transform: translateY(50%);
+                width: 3rem;
+                height: 4rem;
+                img {
+                    width: 50%;
+                }
+            }
+        }
+       &-form {
+           label {
+               transform: translateX(0%) translateY(50%);
+            }
+           &-block-btn {
+                margin-top: 2rem;
+            }
+        }
+       .form-input {
+           margin: 0;
+       }
+       .hand {
+           display: none;
+       }
+    }
+    .feedback-slider_item {
+        padding: 2rem;
+    }
+    .solutions {
+        &-woman {
+            display: none;
+        }
+        &-block {
+            &-header {
+                h2 {
+                    margin-bottom: 5rem;
+                }
+            }
+            &-solutions,
+            &-problems {
+                margin-bottom: 3rem;
+                min-height: auto;
+            }
+        }
+    }
+    .upsell {
+        &-info {
+            &-block {
+                p {
+                    min-height: auto;
+                }
+            }
+        }
+    }
+    .footer {
+        &-logo {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        &-des {
+            margin-top: 3rem;
+            text-align: center;
+        }
+    }
+}
+@media (max-width:575px) {
+    .prev,
+    .next {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .feedback {
+        &-slider{
+            &-btn {
+                top: 45%;
+                transform: translateY(50%);
+                width: 3rem;
+                height: 4rem;
+                img {
+                    width: 50%;
+                }
+            }
+       }
+    }
+    .scheme {
+        &-block {
+            text-align: center;
+            max-width: 35rem;
+            margin-top: 4rem;
+        }
+    }
+    .contact-form {
+        background: @bg-light;
+        text-align: center;
+        &-header {
+            &-text,
+            h1 {
+                text-align: center;
+            } 
+            &-text {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+@media (max-width: 500px) {
+    .main-content h1 {
+        font-size: 2.5rem;
+    }
+}
